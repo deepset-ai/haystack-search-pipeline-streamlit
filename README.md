@@ -1,3 +1,14 @@
+---
+title: Haystack Search Pipeline with Streamlit
+emoji: 👑
+colorFrom: indigo
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.23.0
+app_file: app.py
+pinned: false
+---
+
 # Temaplate Streamlit App for Haystack Search Pipelines
 
 This template Streamlit app set up for simple [Haystack search applictitions](https://docs.haystack.deepset.ai/docs/semantic_search) which does _nothing_ in this state.
@@ -61,7 +72,8 @@ A few things to pay attention to:
 2. Create a Hugging Face token on your HF account.
 3. Create a secret on your GitHub repo called `HF_TOKEN` and put your Hugging Face token here.
 4. If you're using DocumentStores or APIs that require some keys/tokens, make sure these are provided as a secret for your HF Space too!
-5. Create a file in `.github/workflows/hf_sync.yml`. Here's an example that you can change with your own information, and an [example workflow](https://github.com/TuanaCelik/should-i-follow/blob/main/.github/workflows/hf_sync.yml) working for the [Should I Follow demo](https://huggingface.co/spaces/deepset/should-i-follow)
+5. This readme is set up to tell HF spaces that it's using streamlit and that the app is running on `app.py`, make any changes to the frontmatter of this readme to display the title, emoji etc you desire.
+6. Create a file in `.github/workflows/hf_sync.yml`. Here's an example that you can change with your own information, and an [example workflow](https://github.com/TuanaCelik/should-i-follow/blob/main/.github/workflows/hf_sync.yml) working for the [Should I Follow demo](https://huggingface.co/spaces/deepset/should-i-follow)
 
 ```yaml
 name: Sync to Hugging Face hub
