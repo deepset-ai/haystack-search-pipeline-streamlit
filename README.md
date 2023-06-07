@@ -93,5 +93,5 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://{YOUR_HF_USERNA<E}:$HF_TOKEN@{YOUR_HF_SPACE_REPO} main
+        run: git push --force https://{YOUR_HF_USERNAME}:$HF_TOKEN@{YOUR_HF_SPACE_REPO} main
 ```
