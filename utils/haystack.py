@@ -1,7 +1,7 @@
 import streamlit as st
 
 from haystack import Pipeline
-
+from haystack.schema import Answer
 #Use this file to set up your Haystack pipeline and querying
 
 
@@ -19,4 +19,4 @@ def query(question):
     print("Received question")
     params = {}
     # results = pipe.run(question, params=params)
-    return [{"answer": "results","context": "Call  pipe.run(question, params=params) and return results in /utils/haystack.py query()"}]
+    return [Answer(answer="results", context="Call  pipe.run(question, params=params) and return results in /utils/haystack.py query()")]
