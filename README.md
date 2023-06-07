@@ -24,7 +24,7 @@ To run the bare application which does _nothing_:
 
 This will start up the app on `localhost:8501` where you will find a simple search bar. Before you start editing, you'll notice that the app will only show you instructions on what to edit:
 
-<img width="768" alt="image" src="https://github.com/deepset-ai/haystack-search-pipeline-streamlit/assets/15802862/5c2d7fc2-8fa6-4d67-b478-e5b314dcebc4">
+<img width="768" alt="image" src="https://github.com/deepset-ai/haystack-search-pipeline-streamlit/assets/15802862/f38bc0ef-3828-459b-9415-d7d84c6f7ce1">
 
 ## How to use this template
 1. Create a new repository from this template or simply open it in a codespace to start playing around 💙
