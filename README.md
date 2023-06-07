@@ -51,7 +51,7 @@ results = pipe.run(question, params=params)
 return results["answers"]
 ```
 
-### Pushing to Hugging Face Spaces 🤗
+## Pushing to Hugging Face Spaces 🤗
 
 Below is an exaople GitHub action that will let you push your Streamlit app straight to the Hugging Face Hub as a Space.
 
