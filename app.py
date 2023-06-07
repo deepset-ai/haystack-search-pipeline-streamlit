@@ -11,7 +11,7 @@ from utils.ui import reset_results, set_initial_state
 
 set_initial_state()
 
-st.write("# Srart building out the content of your application here")
+st.write("# Start building out the content of your application here")
 
 # Search bar
 question = st.text_input("Ask a question", value=st.session_state.question, max_chars=100, on_change=reset_results)
