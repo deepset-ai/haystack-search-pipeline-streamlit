@@ -18,7 +18,7 @@ This will start up the app on `localhost:8501` where you will dind a simple sear
 <img width="868" alt="image" src="https://github.com/deepset-ai/demo-template/assets/15802862/8a110e46-7c33-469c-8763-a62053c2ca2f">
 
 ## How to use this template
-1. Create a new repository from this teamplate.
+1. Create a new repository from this teamplate or simply open it in a codespace to start playing around 💙
 2. Make sure you're `requirements.txt` file includes the Haystack and Streamlit versions you would like to use.
 3. Complete the code to include your Haystack search pipeline and return the results.
 4. Make any UI edits you'd like to and [share with the Haystack community](https://haystack.deepeset.ai/community) 🥳
