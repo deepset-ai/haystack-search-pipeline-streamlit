@@ -6,9 +6,7 @@ from haystack import Pipeline
 
 
 # cached to make index and models load only at start
-@st.cache(
-    hash_funcs={"builtins.SwigPyObject": lambda _: None}, allow_output_mutation=True
-)
+@st.cache_resource(show_spinner=False)
 def start_haystack():
     #Use this function to contruct a pipeline
     pipe = Pipeline()
@@ -16,9 +14,9 @@ def start_haystack():
 
 pipe = start_haystack()
 
-@st.cache(allow_output_mutation=True)
+@st.cache_data(show_spinner=True)
 def query(question):
     print("Received question")
     params = {}
     # results = pipe.run(question, params=params)
-    return [{"answer": "results","context": "Call  pipe.run(question, params=params) amd return results in /utils/haystack.py query()"}]
+    return [{"answer": "results","context": "Call  pipe.run(question, params=params) and return results in /utils/haystack.py query()"}]

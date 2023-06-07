@@ -14,7 +14,7 @@ set_initial_state()
 st.write("# Srart building out the content of your application here")
 
 # Search bar
-question = st.text_input("", value=st.session_state.question, max_chars=100, on_change=reset_results)
+question = st.text_input("Ask a question", value=st.session_state.question, max_chars=100, on_change=reset_results)
 
 run_pressed = st.button("Run")
 
@@ -44,8 +44,8 @@ if st.session_state.results:
     answers = st.session_state.results
     
     for count, answer in enumerate(answers):
-        if answer["answer"]:
-            text, context = answer["answer"], answer["context"]
+        if answer.answer:
+            text, context = answer.answer, answer.context
             start_idx = context.find(text)
             end_idx = start_idx + len(text)
             st.write(

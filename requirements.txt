@@ -1,4 +1,5 @@
-farm-haystack==1.11.1
-streamlit==1.10.0
+farm-haystack==1.17.1
+streamlit==1.23.0
 markdown
 st-annotated-text
+datasets
