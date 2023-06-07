@@ -13,7 +13,7 @@ pinned: false
 
 This template [Streamlit](https://docs.streamlit.io/) app set up for simple [Haystack search applications](https://docs.haystack.deepset.ai/docs/semantic_search) which does _nothing_ in this state.
 
-See the ['How to use this tamplate'](#how-to-use-this-template) instructions below to create a simple UI for your own Haystack search pipelines.
+See the ['How to use this template'](#how-to-use-this-template) instructions below to create a simple UI for your own Haystack search pipelines.
 
 Below you will also find instructions on how you could [push this to Hugging Face Spaces 🤗](#pushing-to-hugging-face-spaces-).
 
@@ -22,13 +22,13 @@ To run the bare application which does _nothing_:
 1. Install requirements: `pip install -r requirements.txt`
 2. Run the streamlit app: `streamlit run app.py`
 
-This will start up the app on `localhost:8501` where you will dind a simple search bar. Before you start editing, you'll notice that the app will only show you instructions on what to edit:
+This will start up the app on `localhost:8501` where you will find a simple search bar. Before you start editing, you'll notice that the app will only show you instructions on what to edit:
 
 <img width="768" alt="image" src="https://github.com/deepset-ai/haystack-search-pipeline-streamlit/assets/15802862/5c2d7fc2-8fa6-4d67-b478-e5b314dcebc4">
 
 ## How to use this template
-1. Create a new repository from this teamplate or simply open it in a codespace to start playing around 💙
-2. Make sure you're `requirements.txt` file includes the Haystack and Streamlit versions you would like to use.
+1. Create a new repository from this template or simply open it in a codespace to start playing around 💙
+2. Make sure your `requirements.txt` file includes the Haystack and Streamlit versions you would like to use.
 3. Complete the code to include your Haystack search pipeline and return the results.
 4. Make any UI edits you'd like to and [share with the Haystack community](https://haystack.deepeset.ai/community) 🥳
 
@@ -62,7 +62,7 @@ return results["answers"]
 
 ## Pushing to Hugging Face Spaces 🤗
 
-Below is an exaople GitHub action that will let you push your Streamlit app straight to the Hugging Face Hub as a Space.
+Below is an example GitHub action that will let you push your Streamlit app straight to the Hugging Face Hub as a Space.
 
 A few things to pay attention to:
 
