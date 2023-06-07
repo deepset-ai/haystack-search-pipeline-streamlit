@@ -11,7 +11,7 @@ pinned: false
 
 # Temaplate Streamlit App for Haystack Search Pipelines
 
-This template Streamlit app set up for simple [Haystack search applictitions](https://docs.haystack.deepset.ai/docs/semantic_search) which does _nothing_ in this state.
+This template [Streamlit](https://docs.streamlit.io/) app set up for simple [Haystack search applictitions](https://docs.haystack.deepset.ai/docs/semantic_search) which does _nothing_ in this state.
 
 See the ['How to use this tamplate'](#how-to-use-this-template) instructions below to create a simple UI for your own Haystack search pipelines.
 
@@ -19,10 +19,8 @@ Below you will also find instructions on how you could [push this to Hugging Fac
 
 ## Installation and Running
 To run the bare application which does _nothing_:
-1. Install requirements:
-`pip install -r requirements.txt`
-2. Run the streamlit app:
-`streamlit run app.py`
+1. Install requirements: `pip install -r requirements.txt`
+2. Run the streamlit app: `streamlit run app.py`
 
 This will start up the app on `localhost:8501` where you will dind a simple search bar. Before you start editing, you'll notice that the app will only show you instructions on what to edit:
 
