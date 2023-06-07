@@ -14,6 +14,8 @@ To run the bare application which does _nothing_:
 `streamlit run app.py`
 
 This will start up the app on `localhost:8501` where you will dind a simple search bar. Before you start editing, you'll notice that the app will only show you instructions on what to edit:
+<img width="868" alt="image" src="https://github.com/deepset-ai/demo-template/assets/15802862/8a110e46-7c33-469c-8763-a62053c2ca2f">
+
 
 ## How to use this template
 1. Fork this repository. Here are some [instructions on forking a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
