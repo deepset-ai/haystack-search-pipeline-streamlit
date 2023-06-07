@@ -9,9 +9,9 @@ app_file: app.py
 pinned: false
 ---
 
-# Temaplate Streamlit App for Haystack Search Pipelines
+# Template Streamlit App for Haystack Search Pipelines
 
-This template [Streamlit](https://docs.streamlit.io/) app set up for simple [Haystack search applictitions](https://docs.haystack.deepset.ai/docs/semantic_search) which does _nothing_ in this state.
+This template [Streamlit](https://docs.streamlit.io/) app set up for simple [Haystack search applications](https://docs.haystack.deepset.ai/docs/semantic_search) which does _nothing_ in this state.
 
 See the ['How to use this tamplate'](#how-to-use-this-template) instructions below to create a simple UI for your own Haystack search pipelines.
 
