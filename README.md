@@ -18,7 +18,7 @@ This will start up the app on `localhost:8501` where you will dind a simple sear
 
 
 ## How to use this template
-1. Fork this repository. Here are some [instructions on forking a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+1. Create a new repository from this teamplate.
 2. Make sure you're `requirements.txt` file includes the Haystack and Streamlit versions you would like to use.
 3. Complete the code to include your Haystack search pipeline and return the results.
 4. Make any UI edits you'd like to and [share with the Haystack community](https://haystack.deepeset.ai/community) 🥳
