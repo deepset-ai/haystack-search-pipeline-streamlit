@@ -4,7 +4,7 @@ This template Streamlit app set up for simple [Haystack search applictitions](ht
 
 See the ['How to use this tamplate'](#how-to-use-this-template) instructions below to create a simple UI for your own Haystack search pipelines.
 
-Below you will also find instructions on how you could [push this to Hugging Face Spaces 🤗](#pushing-to-hugging-face-spaces-🤗).
+Below you will also find instructions on how you could [push this to Hugging Face Spaces 🤗](#pushing-to-hugging-face-spaces-).
 
 ## Installation and Running
 To run the bare application which does _nothing_:
