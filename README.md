@@ -44,7 +44,7 @@ This will start up the app on `localhost:8501` where you will find a simple sear
 
 ```python
 #choose a document store and write documents to it
-document_store = InMemoryDocumentStore() 
+document_store = InMemoryDocumentStore(use_bm25=True) 
 
 retriever = BM25Retreiver(document_store=document_store)
 reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=True)
@@ -55,7 +55,7 @@ pipe.add_node(component=reader, name="Reader", inputs=["Reader])
 ```
 2. Run your Haystack search pipeline in the `query()` function and return the `results`. E.g.
 ```python
-params = {"Retriever": {top_k: 5}}
+params = {"Retriever": {"top_k": 5}}
 results = pipe.run(question, params=params)
 return results["answers"]
 ```
