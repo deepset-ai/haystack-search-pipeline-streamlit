@@ -37,7 +37,7 @@ This will start up the app on `localhost:8501` where you will find a simple sear
     - `config.py`: This is empty in the current state. You may use this file if you'd like to make use of any secrets such as an OpenAI key, a token for an API and so on. An example of this is in [this demo project](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/config.py).
     - `haystack.py`: Here you will find some functions already set up for you to start creating your Haystack search pipeline. It includes 2 main functions called `start_haystack()` which is what we use to create a pipeline and cache it, and `query()` which is the function called by `app.py` once a user query is received.
     - `ui.py`: Use this file for any UI and initial value setups.
-- `app.py`: This is the main Stremalit application file that we will run. In its current state it has a simple search bar, a 'Run' button, and a response that you can highlight answers with.
+- `app.py`: This is the main Streamlit application file that we will run. In its current state it has a simple search bar, a 'Run' button, and a response that you can highlight answers with.
 
 ### What to edit?
 1. Create your Haystack search pipeline in the `start_haystack()` function. For example and Extractive QA pipeline:
@@ -46,7 +46,7 @@ This will start up the app on `localhost:8501` where you will find a simple sear
 #choose a document store and write documents to it
 document_store = InMemoryDocumentStore(use_bm25=True) 
 
-retriever = BM25Retreiver(document_store=document_store)
+retriever = BM25Retriever(document_store=document_store)
 reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=True)
 
 pipe = Pipeline()
