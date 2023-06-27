@@ -51,7 +51,7 @@ reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=Tr
 
 pipe = Pipeline()
 pipe.add_node(component=retriever, name="Retriever", inputs=['Query'])
-pipe.add_node(component=reader, name="Reader", inputs=["Reader])
+pipe.add_node(component=reader, name="Reader", inputs=["Reader"])
 ```
 2. Run your Haystack search pipeline in the `query()` function and return the `results`. E.g.
 ```python
