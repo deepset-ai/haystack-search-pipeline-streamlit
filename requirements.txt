@@ -1,4 +1,6 @@
-farm-haystack==1.17.1
+safetensors==0.3.3.post1
+farm-haystack[inference,weaviate,opensearch]==1.20.0
+milvus-haystack
 streamlit==1.23.0
 markdown
 st-annotated-text

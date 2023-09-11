@@ -11,7 +11,7 @@ pinned: false
 
 # Template Streamlit App for Haystack Search Pipelines
 
-This template [Streamlit](https://docs.streamlit.io/) app set up for simple [Haystack search applications](https://docs.haystack.deepset.ai/docs/semantic_search) which does _nothing_ in this state.
+This template [Streamlit](https://docs.streamlit.io/) app set up for simple [Haystack search applications](https://docs.haystack.deepset.ai/docs/semantic_search). The template is ready to do QA with **Retrievel Augmented Generation**, or **Ectractive QA**
 
 See the ['How to use this template'](#how-to-use-this-template) instructions below to create a simple UI for your own Haystack search pipelines.
 
@@ -22,43 +22,57 @@ To run the bare application which does _nothing_:
 1. Install requirements: `pip install -r requirements.txt`
 2. Run the streamlit app: `streamlit run app.py`
 
-This will start up the app on `localhost:8501` where you will find a simple search bar. Before you start editing, you'll notice that the app will only show you instructions on what to edit:
+This will start up the app on `localhost:8501` where you will find a simple search bar. Before you start editing, you'll notice that the app will only show you instructions on what to edit.
 
-<img width="768" alt="image" src="https://github.com/deepset-ai/haystack-search-pipeline-streamlit/assets/15802862/f38bc0ef-3828-459b-9415-d7d84c6f7ce1">
+### Optional Configurations
+
+You can set optional cofigurations to set the:
+-  `--task` you want to start the app with: `rag` or `extractive` (default: rag)
+-  `--store` you want to use: `inmemory`, `opensearch`, `weaviate` or `milvus` (default: inmemory)
+-  `--name` you want to have for the app. (default: 'My Search App')
+
+E.g.:
+
+```bash
+streamlit run app.py -- --store opensearch --task extractive --name 'My Opensearch Documentation Search'
+```
+
+In a `.env` file, include all the config settings that you would like to use based on:
+- The DocumentStore of your choice
+- The Extractive/Generative model of your choice
+
+While the `/utils/config.py` will create default values for some configurations, others have to be set in the `.env` such as the `OPENAI_KEY`
+
+Example `.env`
+
+```
+OPENAI_KEY=YOUR_KEY
+EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L12-v2
+GENERATIVE_MODEL=text-davinci-003
+```
+
 
 ## How to use this template
 1. Create a new repository from this template or simply open it in a codespace to start playing around 💙
 2. Make sure your `requirements.txt` file includes the Haystack and Streamlit versions you would like to use.
-3. Complete the code to include your Haystack search pipeline and return the results.
-4. Make any UI edits you'd like to and [share with the Haystack community](https://haystack.deepeset.ai/community) 🥳
+3. Change the code in `utils/haystack.py` if you would like a different pipeline.
+4. Create a `.env`file with all of your configuration settings.
+5. Make any UI edits you'd like to and [share with the Haystack community](https://haystack.deepeset.ai/community)
+6. Run the app as show in [installation and running](#installation-and-running)
 
 ### Repo structure
 - `./utils`: This is where we have 3 files: 
-    - `config.py`: This is empty in the current state. You may use this file if you'd like to make use of any secrets such as an OpenAI key, a token for an API and so on. An example of this is in [this demo project](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/config.py).
+    - `config.py`: This file extracts all of the configuration settings from a `.env` file. For some config settings, it uses default values. An example of this is in [this demo project](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/config.py).
     - `haystack.py`: Here you will find some functions already set up for you to start creating your Haystack search pipeline. It includes 2 main functions called `start_haystack()` which is what we use to create a pipeline and cache it, and `query()` which is the function called by `app.py` once a user query is received.
     - `ui.py`: Use this file for any UI and initial value setups.
 - `app.py`: This is the main Streamlit application file that we will run. In its current state it has a simple search bar, a 'Run' button, and a response that you can highlight answers with.
 
 ### What to edit?
-1. Create your Haystack search pipeline in the `start_haystack()` function. For example and Extractive QA pipeline:
+There are default pipelines both in `start_haystack_extractive()` and `start_haystack_rag()`
 
-```python
-#choose a document store and write documents to it
-document_store = InMemoryDocumentStore(use_bm25=True) 
+- Change the pipelines to use the embedding models, extractive or generative models as you need.
+- If using the `rag` task, change the `default_prompt_template` to use one of our available ones on [PromptHub](https://prompthub.deepset.ai) or create your own `PromptTemplate`
 
-retriever = BM25Retriever(document_store=document_store)
-reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=True)
-
-pipe = Pipeline()
-pipe.add_node(component=retriever, name="Retriever", inputs=['Query'])
-pipe.add_node(component=reader, name="Reader", inputs=["Reader])
-```
-2. Run your Haystack search pipeline in the `query()` function and return the `results`. E.g.
-```python
-params = {"Retriever": {"top_k": 5}}
-results = pipe.run(question, params=params)
-return results["answers"]
-```
 
 ## Pushing to Hugging Face Spaces 🤗
 
