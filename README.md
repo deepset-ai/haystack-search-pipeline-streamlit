@@ -11,7 +11,11 @@ pinned: false
 
 # Template Streamlit App for Haystack Search Pipelines
 
-This template [Streamlit](https://docs.streamlit.io/) app set up for simple [Haystack search applications](https://docs.haystack.deepset.ai/docs/semantic_search). The template is ready to do QA with **Retrievel Augmented Generation**, or **Ectractive QA**
+
+> [!WARNING]
+> **This template is for Haystack version 1.x**. Use this template: [Haystack Streamlit App](https://github.com/deepset-ai/haystack-streamlit-app) for Haystack 2.x applications. 
+
+This template [Streamlit](https://docs.streamlit.io/) app set up for simple [Haystack search applications](https://docs.haystack.deepset.ai/docs/semantic_search). The template is ready to do QA with **Retrievel Augmented Generation**, or **Extractive QA**
 
 See the ['How to use this template'](#how-to-use-this-template) instructions below to create a simple UI for your own Haystack search pipelines.
 
